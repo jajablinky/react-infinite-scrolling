@@ -16,6 +16,7 @@ const usePosts = (pageNum = 1) => {
     const controller = new AbortController();
     const { signal } = controller;
 
+    // import axios to handle data. In axios.js there it is handling
     getPostsPage(pageNum, { signal })
       .then((data) => {
         setResults((prev) => [...prev, ...data]);
